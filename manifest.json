@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Libby Book Checker",
+  "version": "1.0",
+  "description": "Check Libby for your local library's availability before buying on Amazon.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://www.amazon.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.amazon.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
